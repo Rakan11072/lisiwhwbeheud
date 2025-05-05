@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة عناوين MAC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">إدارة عناوين MAC</h1>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>إضافة عنوان MAC جديد</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="macForm">
+                            <div class="mb-3">
+                                <label for="deviceName" class="form-label">اسم الجهاز</label>
+                                <input type="text" class="form-control" id="deviceName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="macAddress" class="form-label">عنوان MAC</label>
+                                <input type="text" class="form-control" id="macAddress" placeholder="00:1A:2B:3C:4D:5E" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="screenUrl" class="form-label">رابط شاشة الجهاز (اختياري)</label>
+                                <input type="url" class="form-control" id="screenUrl" placeholder="http://">
+                            </div>
+                            <button type="submit" class="btn btn-primary">إضافة</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>قائمة الأجهزة المضافة</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="devicesList" class="list-group">
+                            <!-- الأجهزة ستظهر هنا -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>عرض شاشة الجهاز</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="screenViewer" class="text-center">
+                            <p class="text-muted">اختر جهازاً لعرض شاشته</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
